@@ -19,12 +19,5 @@
         "category": "Electronics",
         "price": 24.0,
         "in_stock": false
-    },
-    {
-        "id": 4,
-        "name": "Backpack",
-        "category": "Bags",
-        "price": 34.75,
-        "in_stock": true
     }
 ]
