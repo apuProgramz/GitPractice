@@ -1,14 +1,30 @@
 [
     {
         "id": 1,
-        "name": "Item 1"
+        "name": "Notebook",
+        "category": "Stationery",
+        "price": 4.99,
+        "in_stock": true
     },
     {
         "id": 2,
-        "name": "Item 2"
+        "name": "Water Bottle",
+        "category": "Accessories",
+        "price": 12.5,
+        "in_stock": true
     },
     {
         "id": 3,
-        "name": "Item 3"
+        "name": "Desk Lamp",
+        "category": "Electronics",
+        "price": 24.0,
+        "in_stock": false
+    },
+    {
+        "id": 4,
+        "name": "Backpack",
+        "category": "Bags",
+        "price": 34.75,
+        "in_stock": true
     }
 ]
