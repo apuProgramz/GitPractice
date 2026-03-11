@@ -6,12 +6,12 @@ app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/' # Secret key for flashing messages
 
 # MongoDB Atlas connection
-uri = "mongodb+srv://dummy:1234@apurvadb.gl0f3.mongodb.net/?appName=ApurvaDB"
+uri = "mongodb+srv://dummy:1234@apurvadb.gl0f3.mongodb.net/"
 client = MongoClient(uri)
 db = client['ApurvaDB']
 collection = db['users']
 
-@app.route('/', methods=['GET']) 
+@app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
 
@@ -19,6 +19,13 @@ def index():
 def submit():
     name = request.form.get('username')
     password = request.form.get('Password')
+    collection.insert_one({"username": name, "password": password})
+    flash("User registered successfully!")
+    return redirect(url_for('success'))
+
+@app.route('/todo', methods=['GET'])
+def todo():
+    return render_template('todo.html')
 
 @app.route('/success')
 def success():
