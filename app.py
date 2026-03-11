@@ -24,6 +24,14 @@ def submit():
 def success():
     return render_template('success.html')
 
+@app.route('/submittodoitem', methods=['POST'])
+def submittodoitem():
+    item_name = request.form.get('itemName')
+    item_description = request.form.get('itemDescription')
+    todo_collection = db['todoitems']
+    todo_collection.insert_one({"itemName": item_name, "itemDescription": item_description})
+    return jsonify({"message": "Todo item added successfully"}), 201
+
 @app.route('/view', methods=['GET'])
 def view():
     try:
