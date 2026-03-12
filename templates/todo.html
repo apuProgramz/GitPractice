@@ -9,6 +9,15 @@
     <h1>To-Do List</h1>
     <h2>Add a new item</h2>
     <form action="/add-todo" method="post">
+        <label for="item_id">Item ID:</label>
+        <input type="text" id="item_id" name="item_id" required><br><br>
+
+        <label for="item_uuid">Item UUID:</label>
+        <input type="text" id="item_uuid" name="item_uuid" required><br><br>
+
+        <label for="Item Hash">Item HASH:</label>
+        <input type="text" id="Item Hash" name="Item Hash" required><br><br>
+
         <label for="item_name">Item Name:</label>
         <input type="text" id="item_name" name="item_name" required><br><br>
 
